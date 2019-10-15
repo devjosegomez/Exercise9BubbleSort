@@ -5,7 +5,7 @@ import java.util.Random;
 public class BubbleSort {
 
 	public static void main(String[] args) {
-		final int ELEMENTS_ARRAY = 100;
+		final int ELEMENTS_ARRAY = 10;
 		int tmp = 0;
 		int[] unorderedArray = new int[ELEMENTS_ARRAY];
 		int[] orderedArray = new int[ELEMENTS_ARRAY];
@@ -17,11 +17,27 @@ public class BubbleSort {
 		}
 		
 		for(int i=0; i<ELEMENTS_ARRAY; i++) {
-			System.out.println(unorderedArray[i] + "");
+			System.out.print(unorderedArray[i] + " ");
 		}
 		
+		System.out.println(" ");
+		
 		//method bubble
-
+		for(int i = 0; i<ELEMENTS_ARRAY; i++) {
+			for(int j=0; j<ELEMENTS_ARRAY-1; j++) {
+				if(unorderedArray[j] < unorderedArray[j+1]) {
+					tmp = unorderedArray[j+1];
+					unorderedArray[j+1] = unorderedArray[j];
+					unorderedArray[j]=tmp;
+				}
+			}
+		}
+		
+		//displaying ordered array with Bubble sort Desc
+		for(int i=0; i<ELEMENTS_ARRAY; i++) {
+			System.out.print(unorderedArray[i] + " ");
+		}
+		
 	}
 
 }
