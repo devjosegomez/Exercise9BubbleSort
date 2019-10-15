@@ -12,6 +12,8 @@ public class BubbleSort {
 		
 		Random randomNumbers = new Random(System.nanoTime());
 		
+		System.out.println("Unordered array pseudo random numbers");
+		
 		for(int i=0; i<ELEMENTS_ARRAY; i++) {
 			unorderedArray[i] = randomNumbers.nextInt(101);
 		}
@@ -20,7 +22,7 @@ public class BubbleSort {
 			System.out.print(unorderedArray[i] + " ");
 		}
 		
-		System.out.println(" ");
+		System.out.println("Ordered with bubble sort");
 		
 		//method bubble
 		for(int i = 0; i<ELEMENTS_ARRAY; i++) {
